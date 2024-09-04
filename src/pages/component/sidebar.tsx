@@ -16,9 +16,7 @@ const Sidebar: React.FC<SidebarProps> = ({ data }) => {
           width={300}
           height={300}
           className='rounded-full h-full mb-6'
-          src='/images/image.jpeg'
-          alt='image.jpeg'
-          aria-label='image.jpeg'
+          src={process.env.PUBLIC_URL + '/images/profile.jpeg'}
         />
         <h1 className='mb-2'>{name}</h1>
         <h2 className='mb-8'>{role}</h2>

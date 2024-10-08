@@ -40,15 +40,17 @@ const useFetchData = <T>(url: string) => {
 // Function to send form data (POST request)
 const apiFormData = async (formData: { name: string; email: string; phone: string; messageTitle: string; message: string }) => {
   try {
-    const response = await axios.post(`${BASE_URL}sendemail`, formData, {
+    const {data} = await axios.post(`${BASE_URL}sendemail`, formData, {
       headers: {
-        "Authorization": "coursecloudcomputingfinalprojectupdate"
+        "Authorization": "coursecloudcomputingfinalprojectupdate",
+        "Content-Type": "application/*",
+        "Accept": "*/*",
       }
     });
-    console.log("Email sent successfully:", response.data);
-    return { success: true, data: response.data };
+    console.log("Email sent successfully:", data);
+    return { success: true, data: data };
   } catch (error) {
-    console.error("Error sending email:", error);
+    console.log("Error sending email:", error);
     return { success: false, error };
   }
 };

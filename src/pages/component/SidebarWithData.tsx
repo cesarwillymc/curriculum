@@ -1,7 +1,7 @@
 "use client"; // This makes the component a Client Component
 
 import React from 'react';
-import useFetchData from "../../data/FetchData";
+import { useFetchData } from "../../data/FetchData";
 import Sidebar from "./sidebar";
 import {PersonalData} from "../../data/types"
 const SidebarWithData = () => {

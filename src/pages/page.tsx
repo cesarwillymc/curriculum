@@ -3,8 +3,10 @@
 import React from "react";
 import AboutMeContent from "./component/about-me";
 import ProfessionalExperienceContent from "./component/professional-experience";
+import ContactForm from "./component/contact-form";
+
 import Sidebar from "./component/sidebar";
-import useFetchData from "../data/FetchData";
+import { useFetchData } from "../data/FetchData";
 import {AboutMe, ProfessionalData,Skills,PersonalData} from "../data/types"
 
 const Page = () => {
@@ -26,6 +28,7 @@ const Page = () => {
     
       {dataAboutMe && <AboutMeContent data={dataAboutMe} skills={dataSkills} />}
       {dataExperience && <ProfessionalExperienceContent data={dataExperience} />}
+      <ContactForm />
     </div>
   );
 };
